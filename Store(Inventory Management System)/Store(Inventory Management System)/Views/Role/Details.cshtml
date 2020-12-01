@@ -1,0 +1,30 @@
+﻿@model Store_Inventory_Management_System_.Role
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_sidePanelPage.cshtml";
+}
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<h2>Details</h2>
+
+<div>
+    <h4>Role</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    @Html.ActionLink(" Edit", "Edit", "Role", new { id = Model.Id }, new { @class = "btn btn-primary fa fa-pencil-square-o" }) |
+    @Html.ActionLink(" Back to List", "Index", "Role", new { @class = "btn btn-primary fa fa-chevron-circle-left" })
+</p>

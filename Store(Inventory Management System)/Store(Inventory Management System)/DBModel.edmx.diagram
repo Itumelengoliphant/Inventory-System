@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3fcaa4aa197e45fcb41f1d17c89226e1" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Department" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Institution" Width="1.5" PointX="8.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ItemReturn" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Laptop" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Product" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductOut" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Role" Width="1.5" PointX="1.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Supplier" Width="1.5" PointX="3.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ItemReturn_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ItemReturn_Department1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Dept" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ItemReturn_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ItemReturn_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Laptop_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Product_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProductOut_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_ProductOut_User" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

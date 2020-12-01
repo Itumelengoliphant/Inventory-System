@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Store_Inventory_Management_System_.Role>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_sidePanelPage.cshtml";
+}
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<h2>Role Info List</h2>
+@Html.ActionLink("Import to Excel", "Reports", new { ReportType = "Excel" })|
+@Html.ActionLink("Import to PDF", "Reports", new { ReportType = "PDF" })|
+@Html.ActionLink("Import to Word", "Reports", new { ReportType = "Word" })|
+@Html.ActionLink("Import to Image", "Reports", new { ReportType = "Image" })
+<br /><br />
+
+<p>
+    @Html.ActionLink(" Create New", "Create", "Role", new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink(" Edit", "Edit", "Role", new { id = item.Id }, new { @class = "btn btn-primary fa fa-pencil-square-o" }) |
+                @Html.ActionLink(" Details", "Details", "Role", new { id = item.Id }, new { @class = "btn btn-success fa fa-info-circle" }) |
+                @Html.ActionLink(" Delete", "Delete", "Role", new { id = item.Id }, new { @class = "btn btn-danger fa fa-trash-o" })
+            </td>
+        </tr>
+    }
+
+</table>

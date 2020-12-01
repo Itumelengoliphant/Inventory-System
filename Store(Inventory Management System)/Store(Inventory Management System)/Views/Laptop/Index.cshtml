@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Store_Inventory_Management_System_.Laptop>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_sidePanelPage.cshtml";
+}
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<h2>List of Laptops</h2>
+
+<p>
+    @Html.ActionLink(" Add Laptop", "Create", "Laptops", new { @class = "btn btn-primary fa fa-plus-circle" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Condition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrandName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModelNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SerialNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Condition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Name)
+        </td>
+        <td>
+            @Html.ActionLink(" Edit", "Edit", "Laptop", new { id = item.Id }, new { @class = "btn btn-primary fa fa-pencil-square-o" }) |
+            @Html.ActionLink(" Details", "Details", "Laptop", new { id = item.Id }, new { @class = "btn btn-success fa fa-info-circle" }) |
+            @Html.ActionLink(" Delete", "Delete", "Laptop", new { id = item.Id }, new { @class = "btn btn-danger fa fa-trash-o" })
+        </td>
+    </tr>
+}
+
+</table>
